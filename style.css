@@ -25,9 +25,16 @@ li {
   list-style: none;
 }
 
+main {
+  padding-top: 106px;
+}
+
 .main-header {
   background: #06183D;
   padding: 26px 20px 0px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
 }
 
 #logo {
