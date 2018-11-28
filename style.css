@@ -27,17 +27,17 @@ li {
 
 .main-header {
   background: #06183D;
-  padding: 20px;
+  padding: 26px 20px 0px 20px;
 }
 
 #logo {
-  height: 30px;
+  height: 20px;
   margin: 0 auto;
   display: block;
 }
 
 .main-nav {
-  padding: 5px 30px;
+  padding: 5px 30px 0px 30px;
   margin-top: 25px;
 }
 .main-nav ul {
@@ -46,10 +46,12 @@ li {
 }
 .main-nav a {
   color: #fff;
+  display: block;
+  padding-bottom: 9px;
 }
-.main-nav a mark {
+.main-nav mark {
   background: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
   color: #fff;
 }
 
