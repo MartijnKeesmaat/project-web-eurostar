@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito|Raleway");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.main-header {
+  background: #06183D;
+  padding: 20px;
+}
+
+#logo {
+  height: 30px;
+  margin: 0 auto;
+  display: block;
+}
+
+.main-nav {
+  padding: 5px 30px;
+  margin-top: 25px;
+}
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.main-nav a {
+  color: #fff;
+}
+.main-nav a mark {
+  background: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.list-item {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.list-item__thumbnail {
+  margin: 0;
+  margin-right: 10px;
+}
+.list-item__thumbnail img {
+  height: 100px;
+}
+.list-item__meta-data h3 {
+  margin: 0;
+  margin-bottom: 7px;
+}
+.list-item .labels {
+  display: flex;
+  margin-bottom: 5px;
+}
+.list-item .labels img {
+  margin-right: 10px;
+}
+.list-item .labels p {
+  margin: 0;
+  font-size: 0.8em;
+}
+.list-item__actions {
+  display: flex;
+}
+.list-item__actions button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  align-items: center;
+}
+.list-item__actions button img {
+  margin-right: 5px;
+}
+.list-item__actions button p {
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

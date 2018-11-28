@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Raleway')
+
+$color-primary: #ffe600
+$color-secundary: #24B5C8
+$color-dark: #06183D
+$color-dark-2: #394664
+$color-light-blue: #D4F1F5
+$font-headers: 'Nunito', sans-serif
+$font-body: 'Raleway', sans-serif
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  font-family: $font-body
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-headers
+
+ul
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+
+li
+  list-style: none
+
+.main-header
+  background: $color-dark
+  padding: 20px
+
+
+#logo
+  height: 30px
+  margin: 0 auto
+  display: block
+
+.main-nav
+  padding: 5px 30px 
+  margin-top: 25px
+
+  ul
+    display: flex
+    justify-content: space-between
+  li
+  a
+    color: #fff
+
+    mark
+      background: none
+      border-bottom: 1px solid #fff
+      color: #fff
+        
+
+.list-item
+  width: 100%
+  padding: 10px
+  display: flex
+  align-items: center
+
+  &__thumbnail
+    margin: 0
+    margin-right: 10px
+
+    img
+      height: 100px
+
+
+  &__meta-data
+    h3
+      margin: 0
+      margin-bottom: 7px
+
+  .labels
+    display: flex
+    margin-bottom: 5px
+
+    img
+      margin-right: 10px
+
+    p
+      margin: 0
+      font-size: .8em
+  
+  &__actions
+    display: flex
+
+    button
+      background: none
+      border: none
+      display: flex
+      align-items: center
+      align-items: center
+
+      img
+        margin-right: 5px
+
+      p
+        margin: 0
+
+    &__like
+      button
+        img
+        p
+
+
+    &__comments
+      button
+        img
+        p
+
+    &__downloads
+      button
+        img
+        p
+
+
+              
