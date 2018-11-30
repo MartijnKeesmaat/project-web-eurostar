@@ -25,6 +25,7 @@
 
     <main>
       <section class="articles">
+        <div class="articles__overlay"></div>
         <article class="list-item">
           <figure class="list-item__thumbnail">
             <img src="img/posters/thumbs/poster.jpg" alt="poster" />
@@ -211,7 +212,11 @@
         </article>
       </section>
 
-      <form>
+      <button class="filter-button">
+        <img src="img/icons/filter.svg" alt="" />
+      </button>
+
+      <form class="filters">
         <section>
           <h3>Genres <small>7 verhalen</small></h3>
           <div class="tag-select__tags">
@@ -286,5 +291,6 @@
 
       <button><img src="img/icons/filter.svg" alt="filter icon" /></button>
     </main>
+    <script src="scripts.js"></script>
   </body>
 </html>

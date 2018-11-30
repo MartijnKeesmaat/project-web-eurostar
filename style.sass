@@ -30,6 +30,8 @@ li
 
 main
   padding-top: 106px
+  overflow: hidden
+  width: 100vw
 
 .main-header
   background: $color-dark
@@ -61,6 +63,16 @@ main
     border-bottom: 2px solid #fff
     color: #fff
         
+.articles__overlay
+  width: 100%
+  height: 100%
+  background: rgba(#000, .3)
+  position: absolute
+  z-index: 2
+  display: none
+
+  &--is-active
+    display: block
 
 .list-item
   width: 100%
@@ -68,6 +80,9 @@ main
   display: flex
   align-items: center
   border-bottom: 1px solid #DAD7D7
+
+  &:last-child 
+    border-bottom: none
 
   &__thumbnail
     margin: 0
@@ -129,4 +144,49 @@ main
     //     p
 
 
-              
+.filters
+  background: #fff
+  transform: translateY(100%)
+  transition: .3s all ease
+  position: fixed 
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 60%
+  z-index: 3
+ 
+
+.articles__overlay
+  width: 100%
+  height: 100%
+  background: rgba(#000, .3)
+  position: absolute
+  z-index: 2
+  visibility: hidden
+  opacity: 0
+  transition: .3s all ease
+    
+button.filter-button 
+  position: fixed
+  bottom: 30px
+  right: 30px
+  background: #50C4D3
+  border: 2px solid #109EB3
+  border-radius: 50%
+  width: 58px
+  height: 58px
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #fff
+  z-index: 9
+  box-shadow: 2px 2px 14px rgba(#50C4D3, .7)
+
+
+.filters--is-active
+  .articles__overlay
+    visibility: hidden
+    opacity: 1
+
+  .filters
+    transform: translateY(0)    

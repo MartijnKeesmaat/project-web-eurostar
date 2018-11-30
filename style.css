@@ -27,6 +27,8 @@ li {
 
 main {
   padding-top: 106px;
+  overflow: hidden;
+  width: 100vw;
 }
 
 .main-header {
@@ -62,12 +64,27 @@ main {
   color: #fff;
 }
 
+.articles__overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+.articles__overlay--is-active {
+  display: block;
+}
+
 .list-item {
   width: 100%;
   padding: 14px 21px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #DAD7D7;
+}
+.list-item:last-child {
+  border-bottom: none;
 }
 .list-item__thumbnail {
   margin: 0;
@@ -109,6 +126,54 @@ main {
 }
 .list-item__actions button p {
   margin: 0;
+}
+
+.filters {
+  background: #fff;
+  transform: translateY(100%);
+  transition: 0.3s all ease;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  z-index: 3;
+}
+
+.articles__overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s all ease;
+}
+
+button.filter-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #50C4D3;
+  border: 2px solid #109EB3;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 9;
+  box-shadow: 2px 2px 14px rgba(80, 196, 211, 0.7);
+}
+
+.filters--is-active .articles__overlay {
+  visibility: hidden;
+  opacity: 1;
+}
+.filters--is-active .filters {
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=style.css.map */
