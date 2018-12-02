@@ -27,5 +27,6 @@
 - [ ] Downloads page
 - [ ] Local storage
 - [ ] Offline reading
+- [ ] Responsiveness
 
 
