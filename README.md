@@ -1,4 +1,5 @@
 # Project web - case: eurostar
+![Eurostar Logo](https://static1.squarespace.com/static/5a8189f2e45a7c1f4ef452c2/t/5aa8a23a8165f594c08ac692/1523725261489/Eurostar-Logo.jpg)
 ## Stack
 - [Sass](https://sass-lang.com/) is used for the styling
 - [BEM](http://getbem.com/introduction/) is used for the naming of classes
@@ -11,7 +12,7 @@
 <br>
 
 ## Progress so far..
-![alt text](https://i.gyazo.com/25e587febcf010e810387d569d30d52e.gif)
+![jives](https://i.gyazo.com/25e587febcf010e810387d569d30d52e.gif)
 
 <br>
 
