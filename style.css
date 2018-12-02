@@ -53,12 +53,14 @@ main {
   display: flex;
   justify-content: space-between;
 }
-.main-nav a {
-  color: #fff;
-  display: block;
+.main-nav__item {
   padding-bottom: 9px;
 }
-.main-nav mark {
+.main-nav__item a {
+  color: #fff;
+  display: block;
+}
+.main-nav__item--active {
   background: none;
   border-bottom: 2px solid #fff;
   color: #fff;

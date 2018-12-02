@@ -53,15 +53,17 @@ main
     display: flex
     justify-content: space-between
 
-  a
-    color: #fff
-    display: block
+  &__item
     padding-bottom: 9px
 
-  mark
-    background: none
-    border-bottom: 2px solid #fff
-    color: #fff
+    a
+      color: #fff
+      display: block
+
+    &--active
+      background: none
+      border-bottom: 2px solid #fff
+      color: #fff
         
 .articles__overlay
   width: 100%
