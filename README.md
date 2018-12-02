@@ -1,6 +1,6 @@
 # Project web - case: eurostar
 ## Stack
-- [Sass](https://sass-lang.com/) is used for the css
+- [Sass](https://sass-lang.com/) is used for the styling
 - [BEM](http://getbem.com/introduction/) is used for the naming of classes
 
 <br>
