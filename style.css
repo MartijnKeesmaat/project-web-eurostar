@@ -66,66 +66,66 @@ main {
   color: #fff;
 }
 
-.articles__overlay {
+.stories__overlay {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
   z-index: 2;
 }
-.articles__overlay--is-active {
+.stories__overlay--is-active {
   display: block;
 }
 
-.list-item {
+.story-list-item {
   width: 100%;
   padding: 14px 21px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #DAD7D7;
 }
-.list-item:last-child {
+.story-list-item:last-child {
   border-bottom: none;
 }
-.list-item__thumbnail {
+.story-list-item__thumbnail {
   margin: 0;
   margin-right: 15px;
 }
-.list-item__thumbnail img {
+.story-list-item__thumbnail img {
   height: 100px;
 }
-.list-item__meta-data h3 {
+.story-list-item__meta-data h3 {
   margin: 0;
   margin-bottom: 7px;
 }
-.list-item .labels {
+.story-list-item .labels {
   display: flex;
   margin-bottom: 5px;
   align-items: center;
   margin-bottom: 10px;
 }
-.list-item .labels img {
+.story-list-item .labels img {
   margin-right: 10px;
 }
-.list-item .labels p {
+.story-list-item .labels p {
   margin: 0;
   font-size: 0.8em;
 }
-.list-item__actions {
+.story-list-item__actions {
   display: flex;
 }
-.list-item__actions button {
+.story-list-item__actions button {
   background: none;
   border: none;
   display: flex;
   align-items: center;
   align-items: center;
 }
-.list-item__actions button img {
+.story-list-item__actions button img {
   margin-right: 5px;
   opacity: 0.5;
 }
-.list-item__actions button p {
+.story-list-item__actions button p {
   margin: 0;
 }
 
@@ -142,7 +142,7 @@ main {
   padding: 10px 30px;
 }
 
-.articles__overlay {
+.stories__overlay {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
@@ -170,7 +170,7 @@ button.filter-button {
   box-shadow: 2px 2px 14px rgba(80, 196, 211, 0.7);
 }
 
-.filters--is-active .articles__overlay {
+.filters--is-active .stories__overlay {
   visibility: visible;
   opacity: 1;
 }
