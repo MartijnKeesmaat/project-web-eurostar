@@ -33,28 +33,28 @@ main {
 
 .main-header {
   background: #06183D;
-  padding: 26px 20px 0px 20px;
+  padding: 1.6em 1em 0px 1em;
   position: fixed;
   width: 100%;
   z-index: 9;
 }
 
 #logo {
-  height: 20px;
+  height: 1.3em;
   margin: 0 auto;
   display: block;
 }
 
 .main-nav {
-  padding: 5px 30px 0px 30px;
-  margin-top: 25px;
+  padding: 0.3em 2em 0px 2em;
+  margin-top: 2em;
 }
 .main-nav ul {
   display: flex;
   justify-content: space-between;
 }
 .main-nav__item {
-  padding-bottom: 9px;
+  padding-bottom: 0.5em;
 }
 .main-nav__item a {
   color: #fff;
@@ -79,7 +79,7 @@ main {
 
 .story-list-item {
   width: 100%;
-  padding: 14px 21px;
+  padding: 0.9em 1.1em;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #DAD7D7;
@@ -89,27 +89,26 @@ main {
 }
 .story-list-item__thumbnail {
   margin: 0;
-  margin-right: 15px;
+  margin-right: 1em;
 }
 .story-list-item__thumbnail img {
   height: 100px;
 }
 .story-list-item__meta-data h3 {
   margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 0.4em;
 }
 .story-list-item .labels {
   display: flex;
-  margin-bottom: 5px;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.8em;
 }
 .story-list-item .labels img {
-  margin-right: 10px;
+  margin-right: 0.6em;
 }
 .story-list-item .labels p {
   margin: 0;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 .story-list-item__actions {
   display: flex;
@@ -122,7 +121,7 @@ main {
   align-items: center;
 }
 .story-list-item__actions button img {
-  margin-right: 5px;
+  margin-right: 0.3em;
   opacity: 0.5;
 }
 .story-list-item__actions button p {
@@ -139,7 +138,7 @@ main {
   width: 100%;
   height: 60%;
   z-index: 3;
-  padding: 10px 30px;
+  padding: 0.6em 2em;
 }
 
 .stories__overlay {
@@ -157,17 +156,17 @@ button.filter-button {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  width: 58px;
+  height: 58px;
   background: #50C4D3;
   border: 2px solid #109EB3;
   border-radius: 50%;
-  width: 58px;
-  height: 58px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   z-index: 9;
-  box-shadow: 2px 2px 14px rgba(80, 196, 211, 0.7);
+  box-shadow: 0.1em 0.1em 1em rgba(80, 196, 211, 0.7);
 }
 
 .filters--is-active .stories__overlay {
