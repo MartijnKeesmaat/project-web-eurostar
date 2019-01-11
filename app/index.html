@@ -74,12 +74,24 @@
     </aside>
 
     <section class="story-container">
-      <h1>Zoeken <small>56 gevonden</small></h1>
+      <header class="story-header">
+        <div class="story-header__title">
+          <h1>Zoeken <small>56 gevonden</small></h1>
 
-      <div class="applied-filters">
-        <div class="pill pill--sort">Nummer</div>
-        <div class="pill">Mysterieus</div>
-      </div>
+          <div class="applied-filters">
+            <div class="pill pill--sort">Nummer</div>
+            <div class="pill">Mysterieus</div>
+            <div class="applied-filters__rm">Verwijder filters</div>
+          </div>
+        </div>
+
+        <div class="sort-desktop">
+          <h4 class="sort-desktop__title">Sorteer:</h4>
+          <button class="sort-desktop__item sort-desktop__item--active">Populair</button>
+          <button class="sort-desktop__item">Nummer</button>
+          <button class="sort-desktop__item">A-Z</button>
+        </div>
+      </header>
 
       <section class="stories">
         <!--

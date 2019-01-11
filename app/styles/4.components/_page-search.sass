@@ -2,6 +2,14 @@
   h1
     display: none
 
+  .applied-filters__rm
+    font-size: 0.8em
+    color: $color-primary
+
+    &:after
+      content: 'x'
+      margin-left: 5px
+
   @media(min-width: 48rem)
     padding-top: 80px
 
@@ -55,8 +63,16 @@
     .applied-filters
       padding: 0
       padding-bottom: 25px
-      margin-top: 30px
+      margin-top: 20px
+      display: flex
+      align-items: center
 
+    .applied-filters__rm
+      display: block
+
+  @media(max-width: 48rem)
+    .applied-filters__rm
+      display: none
 
   @media(min-width: 75rem)
     main
@@ -69,5 +85,12 @@
       width: calc(25% - 15px)
 
   @media(max-width: 75rem)
-    .filter-bar
+    .filter-bar,
+    .sort-desktop
       display: none
+
+    .story-header
+      border-bottom: none
+
+    .applied-filters
+      border-bottom: 1px solid #DAD7D7
