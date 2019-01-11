@@ -7,256 +7,309 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Project web - Case: Eurostar" />
   <meta name="author" content="Martijn Keesmaat" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/main.css" />
   <title>Eurostar</title>
 </head>
 
-<body>
+<body class="page-search">
   <header class="main-header">
     <img id="logo" src="img/logo-mobile.svg" alt="logo Eurostar" />
     <nav class="main-nav">
       <ul>
-        <li class="main-nav__item main-nav__item--active">
+        <li class="main-nav__item">
           <a href="#"> Ontdek </a>
         </li>
-        <li class="main-nav__item"><a> Zoek </a></li>
+        <li class="main-nav__item main-nav__item--active"><a> Zoek </a></li>
         <li class="main-nav__item"><a> Mijn lijsten </a></li>
       </ul>
     </nav>
   </header>
 
+
   <main>
-    <section class="stories">
-      <!--
+    <aside class="filter-bar">
+      <div class="filter-bar__status">
+        <button class="filter-bar__status__btn--active">Alle verhalen</button>
+        <button>Niet gelezen</button>
+        <button>Gelezen</button>
+      </div>
+      <div class="filter-bar__sort">
+        <h3>Soorten verhalen</h3>
+
+        <div class="filter-bar__sort__item">
+          <input type="checkbox" name="gelezen-verhalen" value="alle-verhalen" id="alle-verhalen" checked />
+          <label for="alle-verhalen">Vrolijk <small>(19 verhalen)</small></label>
+        </div>
+
+        <div class="filter-bar__sort__item">
+          <input type="checkbox" name="gelezen-verhalen" value="gelezen" id="gelezen" />
+          <label for="alle-verhalen">Mysterieus <small>(19 verhalen)</small></label>
+        </div>
+
+        <div class="filter-bar__sort__item">
+          <input type="checkbox" name="gelezen-verhalen" id="niet-gelezen" value="niet-gelezen" />
+          <label for="alle-verhalen">Poëtisch <small>(19 verhalen)</small></label>
+        </div>
+
+        <div class="filter-bar__sort__item">
+          <input type="checkbox" name="gelezen-verhalen" id="niet-gelezen" value="niet-gelezen" />
+          <label for="alle-verhalen">Dramatisch <small>(19 verhalen)</small></label>
+        </div>
+
+        <div class="filter-bar__sort__item">
+          <input type="checkbox" name="gelezen-verhalen" id="niet-gelezen" value="niet-gelezen" />
+          <label for="alle-verhalen">Gepassioneerd <small>(19 verhalen)</small></label>
+        </div>
+
+        <div class="filter-bar__sort__item">
+          <input type="checkbox" name="gelezen-verhalen" id="niet-gelezen" value="niet-gelezen" />
+          <label for="alle-verhalen">Grappig <small>(19 verhalen)</small></label>
+        </div>
+
+        <div class="filter-bar__sort__item">
+          <input type="checkbox" name="gelezen-verhalen" id="niet-gelezen" value="niet-gelezen" />
+          <label for="alle-verhalen">Beknopt <small>(19 verhalen)</small></label>
+        </div>
+      </div>
+    </aside>
+
+    <section class="story-container">
+      <h1>Zoeken <small>56 gevonden</small></h1>
+
+      <div class="applied-filters">
+        <div class="pill pill--sort">Nummer</div>
+        <div class="pill">Mysterieus</div>
+      </div>
+
+      <section class="stories">
+        <!--
           ^ Dit geeft een warning omdat er geen heading in zit, maar als ik dit overal zou toepassen dan zou ik op 1 plek na geen div hebben
         -->
-      <div class="stories__overlay"></div>
-      <article class="story-list-item">
-        <figure class="story-list-item__thumbnail">
-          <img src="img/posters/thumbs/poster.jpg" alt="poster" />
-        </figure>
+        <div class="stories__overlay"></div>
+        <article class="story-list-item">
+          <figure class="story-list-item__thumbnail">
+            <img src="img/posters/full/a.jpg" alt="poster" />
+          </figure>
 
-        <section class="story-list-item__meta-data">
-          <h3>Marc 13 poster</h3>
+          <section class="story-list-item__meta-data">
+            <h3>7 - Woordenrally</h3>
 
-          <div class="labels">
-            <img src="img/icons/label.svg" alt="tag icon" />
-            <p>Drama, Crime</p>
-          </div>
-
-          <div class="story-list-item__actions">
-            <div class="story-list-item__actions__like">
-              <button>
-                <img src="img/icons/heart.svg" alt="heart icon" />
-                <span>12</span>
-              </button>
+            <div class="labels">
+              <p>Drama, Crime</p>
             </div>
 
-            <div class="story-list-item__actions__comments">
-              <button>
-                <img src="img/icons/comments.svg" alt="comment icon" />
-                <span>3</span>
-              </button>
+            <div class="story-list-item__actions">
+              <div class="story-list-item__actions__like">
+                <button>
+                  <img src="img/icons/heart.svg" alt="heart icon" />
+                  <span>12</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__comments">
+                <button>
+                  <img src="img/icons/comments.svg" alt="comment icon" />
+                  <span>3</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__downloads">
+                <button>
+                  <img src="img/icons/download.svg" alt="download icon" />
+                </button>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <article class="story-list-item">
+          <figure class="story-list-item__thumbnail">
+            <img src="img/posters/full/b.jpg" alt="poster" />
+          </figure>
+
+          <section class="story-list-item__meta-data">
+            <h3>18 - Enigszins aan de omslachtige kant</h3>
+
+            <div class="labels">
+              <p>Drama, Crime</p>
             </div>
 
-            <div class="story-list-item__actions__downloads">
-              <button>
-                <img src="img/icons/download.svg" alt="download icon" />
-              </button>
+            <div class="story-list-item__actions">
+              <div class="story-list-item__actions__like">
+                <button>
+                  <img src="img/icons/heart.svg" alt="heart icon" />
+                  <span>12</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__comments">
+                <button>
+                  <img src="img/icons/comments.svg" alt="comment icon" />
+                  <span>3</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__downloads">
+                <button>
+                  <img src="img/icons/download.svg" alt="download icon" />
+                </button>
+              </div>
             </div>
+          </section>
+        </article>
+
+        <article class="story-list-item">
+          <figure class="story-list-item__thumbnail">
+            <img src="img/posters/full/c.jpg" alt="poster" />
+          </figure>
+
+          <section class="story-list-item__meta-data">
+            <h3>Marc 13 poster</h3>
+
+            <div class="labels">
+              <p>Drama, Crime</p>
+            </div>
+
+            <div class="story-list-item__actions">
+              <div class="story-list-item__actions__like">
+                <button>
+                  <img src="img/icons/heart.svg" alt="heart icon" />
+                  <span>12</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__comments">
+                <button>
+                  <img src="img/icons/comments.svg" alt="comment icon" />
+                  <span>3</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__downloads">
+                <button>
+                  <img src="img/icons/download.svg" alt="download icon" />
+                </button>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <article class="story-list-item">
+          <figure class="story-list-item__thumbnail">
+            <img src="img/posters/full/d.jpg" alt="poster" />
+          </figure>
+
+          <section class="story-list-item__meta-data">
+            <h3>Marc 13 poster</h3>
+
+            <div class="labels">
+              <p>Drama, Crime</p>
+            </div>
+
+            <div class="story-list-item__actions">
+              <div class="story-list-item__actions__like">
+                <button>
+                  <img src="img/icons/heart.svg" alt="heart icon" />
+                  <span>12</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__comments">
+                <button>
+                  <img src="img/icons/comments.svg" alt="comment icon" />
+                  <span>3</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__downloads">
+                <button>
+                  <img src="img/icons/download.svg" alt="download icon" />
+                </button>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <article class="story-list-item">
+          <figure class="story-list-item__thumbnail">
+            <img src="img/posters/full/e.jpg" alt="poster" />
+          </figure>
+
+          <section class="story-list-item__meta-data">
+            <h3>Marc 13 poster</h3>
+
+            <div class="labels">
+              <p>Drama, Crime</p>
+            </div>
+
+            <div class="story-list-item__actions">
+              <div class="story-list-item__actions__like">
+                <button>
+                  <img src="img/icons/heart.svg" alt="heart icon" />
+                  <span>12</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__comments">
+                <button>
+                  <img src="img/icons/comments.svg" alt="comment icon" />
+                  <span>3</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__downloads">
+                <button>
+                  <img src="img/icons/download.svg" alt="download icon" />
+                </button>
+              </div>
+            </div>
+          </section>
+        </article>
+      </section>
+
+      <button class="filter-button">
+        <img src="img/icons/filter.svg" alt="" />
+      </button>
+
+      <form class="filters">
+        <section>
+          <h3>Sorteer <small> <span>7</span> verhalen gevonden</small></h3>
+          <div class="">
+            <input type="radio" name="science-fiction" value="science-fiction" checked />Populair<br />
+            <input type="radio" name="best-beoordeeld" value="best-beoordeeld" />Best beoordeeld<br />
+            <input type="radio" name="alfabetisch" value="alfabetisch" />Alfabetisch<br />
           </div>
         </section>
-      </article>
 
-      <article class="story-list-item">
-        <figure class="story-list-item__thumbnail">
-          <img src="img/posters/thumbs/poster.jpg" alt="poster" />
-        </figure>
+        <section>
+          <h3>Status</h3>
+          <div class="">
+            <input type="radio" name="gelezen-verhalen" value="alle-verhalen" id="alle-verhalen" checked />
+            <label for="alle-verhalen">Alle</label>
 
-        <section class="story-list-item__meta-data">
-          <h3>Marc 13 poster</h3>
+            <input type="radio" name="gelezen-verhalen" value="gelezen" id="gelezen" />
+            <label for="gelezen">Gelezen</label>
 
-          <div class="labels">
-            <img src="img/icons/label.svg" alt="tag icon" />
-            <p>Drama, Crime</p>
-          </div>
-
-          <div class="story-list-item__actions">
-            <div class="story-list-item__actions__like">
-              <button>
-                <img src="img/icons/heart.svg" alt="heart icon" />
-                <span>12</span>
-              </button>
-            </div>
-
-            <div class="story-list-item__actions__comments">
-              <button>
-                <img src="img/icons/comments.svg" alt="comment icon" />
-                <span>3</span>
-              </button>
-            </div>
-
-            <div class="story-list-item__actions__downloads">
-              <button>
-                <img src="img/icons/download.svg" alt="download icon" />
-              </button>
-            </div>
+            <input type="radio" name="gelezen-verhalen" id="niet-gelezen" value="niet-gelezen" />
+            <label for="niet-gelezen">Niet gelezen</label>
           </div>
         </section>
-      </article>
 
-      <article class="story-list-item">
-        <figure class="story-list-item__thumbnail">
-          <img src="img/posters/thumbs/poster.jpg" alt="poster" />
-        </figure>
-
-        <section class="story-list-item__meta-data">
-          <h3>Marc 13 poster</h3>
-
-          <div class="labels">
-            <img src="img/icons/label.svg" alt="tag icon" />
-            <p>Drama, Crime</p>
-          </div>
-
-          <div class="story-list-item__actions">
-            <div class="story-list-item__actions__like">
-              <button>
-                <img src="img/icons/heart.svg" alt="heart icon" />
-                <span>12</span>
-              </button>
-            </div>
-
-            <div class="story-list-item__actions__comments">
-              <button>
-                <img src="img/icons/comments.svg" alt="comment icon" />
-                <span>3</span>
-              </button>
-            </div>
-
-            <div class="story-list-item__actions__downloads">
-              <button>
-                <img src="img/icons/download.svg" alt="download icon" />
-              </button>
-            </div>
+        <section>
+          <h3>Genres</h3>
+          <div class="tag-select__tags">
+            <button class="pill">Vrolijk</button>
+            <button class="pill">Mysterieus</button>
+            <button class="pill">Drama</button>
+            <button class="pill">Gepassioneerd</button>
+            <button class="pill">Grappig</button>
+            <button class="pill">Beknopt</button>
+            <button class="pill">Poëtisch</button>
           </div>
         </section>
-      </article>
 
-      <article class="story-list-item">
-        <figure class="story-list-item__thumbnail">
-          <img src="img/posters/thumbs/poster.jpg" alt="poster" />
-        </figure>
-
-        <section class="story-list-item__meta-data">
-          <h3>Marc 13 poster</h3>
-
-          <div class="labels">
-            <img src="img/icons/label.svg" alt="tag icon" />
-            <p>Drama, Crime</p>
-          </div>
-
-          <div class="story-list-item__actions">
-            <div class="story-list-item__actions__like">
-              <button>
-                <img src="img/icons/heart.svg" alt="heart icon" />
-                <span>12</span>
-              </button>
-            </div>
-
-            <div class="story-list-item__actions__comments">
-              <button>
-                <img src="img/icons/comments.svg" alt="comment icon" />
-                <span>3</span>
-              </button>
-            </div>
-
-            <div class="story-list-item__actions__downloads">
-              <button>
-                <img src="img/icons/download.svg" alt="download icon" />
-              </button>
-            </div>
-          </div>
-        </section>
-      </article>
-
-      <article class="story-list-item">
-        <figure class="story-list-item__thumbnail">
-          <img src="img/posters/thumbs/poster.jpg" alt="poster" />
-        </figure>
-
-        <section class="story-list-item__meta-data">
-          <h3>Marc 13 poster</h3>
-
-          <div class="labels">
-            <img src="img/icons/label.svg" alt="tag icon" />
-            <p>Drama, Crime</p>
-          </div>
-
-          <div class="story-list-item__actions">
-            <div class="story-list-item__actions__like">
-              <button>
-                <img src="img/icons/heart.svg" alt="heart icon" />
-                <span>12</span>
-              </button>
-            </div>
-
-            <div class="story-list-item__actions__comments">
-              <button>
-                <img src="img/icons/comments.svg" alt="comment icon" />
-                <span>3</span>
-              </button>
-            </div>
-
-            <div class="story-list-item__actions__downloads">
-              <button>
-                <img src="img/icons/download.svg" alt="download icon" />
-              </button>
-            </div>
-          </div>
-        </section>
-      </article>
+      </form>
     </section>
-
-    <button class="filter-button">
-      <img src="img/icons/filter.svg" alt="" />
-    </button>
-
-    <form class="filters">
-      <section>
-        <h3>Genres <small>7 verhalen</small></h3>
-        <div class="tag-select__tags">
-          <input type="checkbox" name="science-fiction" value="science-fiction" />Science fiction<br />
-          <input type="checkbox" name="satire" value="satire" checked />Satire<br />
-        </div>
-      </section>
-
-      <section>
-        <h3>Sorteer</h3>
-        <div class="tag-select__tags">
-          <input type="radio" name="science-fiction" value="science-fiction" checked />Populair<br />
-          <input type="radio" name="best-beoordeeld" value="best-beoordeeld" />Best beoordeeld<br />
-          <input type="radio" name="alfabetisch" value="alfabetisch" />Alfabetisch<br />
-        </div>
-      </section>
-
-      <section>
-        <h3>Status</h3>
-        <div class="tag-select__tags">
-          <input type="radio" name="gelezen-verhalen" value="alle-verhalen" id="alle-verhalen" checked />
-          <label for="alle-verhalen">Alle</label>
-
-          <input type="radio" name="gelezen-verhalen" value="gelezen" id="gelezen" />
-          <label for="gelezen">Gelezen</label>
-
-          <input type="radio" name="gelezen-verhalen" id="niet-gelezen" value="niet-gelezen" />
-          <label for="niet-gelezen">Niet gelezen</label>
-        </div>
-      </section>
-
-      <input type="submit" value="Submit" />
-    </form>
-
-    <button><img src="img/icons/filter.svg" alt="filter icon" /></button>
   </main>
   <script src="scripts.js"></script>
 </body>

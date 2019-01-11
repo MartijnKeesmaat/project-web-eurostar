@@ -1,0 +1,104 @@
+.filters
+  background: #fff
+  transform: translateY(100%)
+  transition: .3s all ease
+  position: fixed 
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 60%
+  z-index: 3
+  padding: 25px
+ 
+  h3
+    font-size: 1.1em
+    font-weight: 500
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    small
+      font-size: 0.6em
+      color: #676666
+      font-weight: 500
+
+      span
+        color: #000
+        font-size: 1.3em
+
+.stories__overlay
+  width: 100%
+  height: 100%
+  background: rgba(#000, .3)
+  position: fixed
+  z-index: 2
+  top: 0
+  z-index: 2
+  visibility: hidden
+  opacity: 0
+  transition: .3s all ease
+    
+button.filter-button 
+  position: fixed
+  bottom: 30px
+  right: 30px
+  width: 58px
+  height: 58px
+  background: #50C4D3
+  border: 2px solid #109EB3
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #fff
+  z-index: 9
+  box-shadow: .1em .1em 1em rgba(#50C4D3, .7)
+
+
+.filters--is-active
+  overflow: hidden
+
+  .stories__overlay
+    visibility: visible
+    opacity: 1
+
+  .filters
+    transform: translateY(0)    
+
+.applied-filters
+  display: flex
+  padding: 10px
+  border-bottom: 1px solid #DAD7D7
+
+.pill
+  background: #EBEBEB
+  padding: 0.4em 1em 0.3em 1em
+  border-radius: 3em
+  font-weight: 500
+  font-size: 0.75em
+  margin-right: 8px  
+  border: none
+  font-family: 'raleway'
+  color: #676666
+
+  &--sort
+    color: #fff
+    background: $color-primary
+
+.tag-select__tags
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  .pill
+    color: #676666
+    padding: 0.8em 1em 0.7em 1em
+    border-radius: 3em
+    font-weight: 500
+    font-size: 0.55em
+    margin-right: 8px
+    border: none
+    width: 100%
+    max-width: 100px
+    margin-bottom: 10px
+

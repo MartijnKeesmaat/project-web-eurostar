@@ -1,0 +1,73 @@
+.page-search
+  h1
+    display: none
+
+  @media(min-width: 48rem)
+    padding-top: 80px
+
+    h1
+      display: block
+
+    section.stories
+      display: flex
+      flex-wrap: wrap
+      padding-top: 40px
+
+    .story-list-item
+      flex-direction: column
+      background: #fff
+      border-bottom: none
+      box-shadow: 2px 2px 14px rgba(#000, .15)
+      max-width: 100%
+      margin-bottom: 30px
+      padding: 0
+      width: calc(33.3% - 15px)
+      margin-right: 15px
+      align-items: flex-start
+      border-radius: 7px
+
+      h3
+        font-size: 0.9em
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+      &__thumbnail
+        margin: 0
+        width: 100%
+        height: 280px
+      
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+
+      &__meta-data
+        padding: 25px
+        max-width: 100%
+
+      &__labels
+        margin-bottom: 0.4em
+
+        p
+          font-size: 0.8em
+
+    .applied-filters
+      padding: 0
+      padding-bottom: 25px
+      margin-top: 30px
+
+
+  @media(min-width: 75rem)
+    main
+      display: flex
+      
+    .filter-bar
+      display: flex
+
+    .story-list-item
+      width: calc(25% - 15px)
+
+  @media(max-width: 75rem)
+    .filter-bar
+      display: none

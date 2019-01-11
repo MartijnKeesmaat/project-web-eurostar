@@ -1,0 +1,76 @@
+.main-header
+  background: $color-dark
+  padding: 1.6em 1em 0px 1em
+  position: fixed
+  width: 100%
+  z-index: 9
+  top: 0
+
+
+  #logo
+    height: 1.3em
+    margin: 0 auto
+    display: block
+
+  .main-nav
+    padding: 0.3em 2em 0px 2em
+    margin-top: 2em
+
+    ul
+      display: flex
+      justify-content: space-between
+
+    &__item
+      padding-bottom: 0.5em
+
+      a
+        color: #fff
+        text-transform: uppercase
+        display: block
+        font-size: 1.4rem
+        font-family: 'nunito', sans-serif
+        font-weight: 700
+        opacity: .6
+        transition: .3s all ease
+        cursor: pointer
+
+      &--active
+        background: none
+        border-bottom: 2px solid $color-secundary
+        color: #fff
+
+        a
+          opacity: 1
+        
+  @media(min-width: 48rem)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 80px
+    padding: 0 30px
+
+    #logo
+      margin: initial
+
+    .main-nav
+      max-width: 380px
+      width: 100%
+      margin-top: 0
+      padding-top: 1.7em
+      height: 100%
+      
+      a, li, ul
+        height: 100%
+
+      a:hover
+        opacity: 1
+
+.stories__overlay
+  width: 100%
+  height: 100%
+  background: rgba(#000, .3)
+  position: absolute
+  z-index: 2
+
+  &--is-active
+    display: block

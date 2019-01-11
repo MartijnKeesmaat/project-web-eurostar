@@ -1,0 +1,50 @@
+.filter-bar
+  display: flex
+  flex-direction: column
+  min-width: 220px
+  max-width: 100%
+  padding-top: 50px
+  margin-right: 40px
+
+  &__status
+    display: flex
+    flex-direction: column
+    border-bottom: 1px solid #DAD7D7
+    padding-bottom: 20px
+    margin-bottom: 30px
+
+    button
+      background: none
+      border: none
+      font-weight: 500
+      font-size: 0.8em
+      text-align: left
+      margin-bottom: 20px
+      transition: .3s all ease
+      cursor: pointer
+
+    .filter-bar__status__btn--active
+      color: $color-primary
+
+      &:hover
+        color: $color-primary
+
+  &__sort
+    display: flex
+    flex-direction: column
+
+    &__item
+      margin-bottom: 5px
+
+    h3
+      font-size: 1em
+      margin-bottom: 10px
+      font-weight: 500
+      font-family: 'raleway', sans-serif
+    
+    label
+      font-size: .8em
+
+      small
+        font-size: .8em
+        color: #676666

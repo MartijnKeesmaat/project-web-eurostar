@@ -1,0 +1,43 @@
+* 
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+
+
+html 
+  font-size: 62.5%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  
+*
+  box-sizing: border-box 
+
+body
+  margin: 0
+  font-family: $font-body
+  padding-top: 132px // equal to fixed header
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-headers
+
+ul
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+
+li
+  list-style: none
+
+main
+  overflow: hidden
+  width: 100vw
+
+
+@media(min-width: 48rem)
+
+  main
+    padding: 40px
+    max-width: 1300px
+    margin: 0 auto
