@@ -5,8 +5,9 @@
 
 <br>
 
-## Compile SASS
-``` sass --watch style.sass style.css ```
+## Run local server && compile sass
+1. ``` npm install || yarn install ``` <br>
+2. ``` gulp ```
 
 ## Live version
 - [Demo](https://martijnkeesmaat.github.io/project-web-eurostar/)
