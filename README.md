@@ -5,6 +5,9 @@
 
 <br>
 
+## Compile SASS
+``` sass --watch style.sass style.css ```
+
 ## Live version
 - [Demo](https://martijnkeesmaat.github.io/project-web-eurostar/)
 
