@@ -54,6 +54,9 @@ button.filter-button
   z-index: 9
   box-shadow: .1em .1em 1em rgba(#50C4D3, .7)
 
+  &:focus
+    outline: none
+
 
 .filters--is-active
   overflow: hidden
@@ -64,6 +67,12 @@ button.filter-button
 
   .filters
     transform: translateY(0)    
+
+  #filter-button--filter
+    display: none
+
+  #filter-button--close
+    display: block
 
 .applied-filters
   display: flex
@@ -79,6 +88,7 @@ button.filter-button
   border: none
   font-family: 'raleway'
   color: #676666
+  text-align: center
 
   &:after
     content: 'x'

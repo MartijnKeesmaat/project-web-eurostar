@@ -1,0 +1,47 @@
+.tag-select__tags
+
+  input
+    opacity: 0
+    position: absolute
+
+  label:after
+    content: ''
+    
+  input:checked + label
+    background: rgba($color-primary, .2)
+    color: $color-primary
+
+  
+
+.status-select,
+.sort-select
+  display: flex
+  margin-bottom: 20px
+
+  .box
+    flex: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: .7em
+    border: $color-primary 2px solid
+    color: $color-primary
+    border-right: 0
+    font-size: 0.65em
+    font-weight: 600
+
+    &:last-child
+      border-right: $color-primary 2px solid
+
+  input
+    opacity: 0
+    position: absolute
+
+  label:after
+    content: ''
+    
+  input:checked + label
+    background: $color-primary
+    color: #fff
+
+  
