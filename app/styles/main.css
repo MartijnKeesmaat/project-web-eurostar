@@ -47,6 +47,10 @@ main {
   /* IE9*/
   src: url("http://db.onlinewebfonts.com/t/a284d848f02dcea64d321ebe739d67e9.eot?#iefix") format("embedded-opentype"); }
 
+@font-face {
+  font-family: 'American Typewriter';
+  src: url("AmericanTypewriter.woff2") format("woff2"), url("AmericanTypewriter.woff") format("woff"); }
+
 body {
   font-weight: 400;
   line-height: 1.6;
@@ -625,7 +629,8 @@ header.story-header {
       width: 120%;
       max-width: 120%;
       font-size: 0.9em;
-      line-height: 2.5; }
+      line-height: 2.5;
+      font-family: 'American Typewriter', sans-serif; }
     .page-story__header__overlay {
       background: linear-gradient(to top, #000, transparent);
       width: 100%;
@@ -647,7 +652,8 @@ header.story-header {
         align-items: center;
     background: none;
     border: none;
-    color: #fff; }
+    color: #fff;
+    font-family: 'American Typewriter', sans-serif; }
     .page-story .circ-btn:focus {
       outline: none; }
     .page-story .circ-btn__circ {
@@ -676,7 +682,7 @@ header.story-header {
         font-family: "Againts refresh" !important;
         margin-top: 5px;
         display: block;
-        font-size: 1em;
+        font-size: 1.2em;
         letter-spacing: 3px; }
 
 .p-story {
@@ -710,7 +716,8 @@ header.story-header {
     opacity: .07;
     max-width: 130vw;
     line-height: 0.9;
-    text-align: center; }
+    text-align: center;
+    font-family: 'American Typewriter', sans-serif; }
   .p-story p {
     color: #fff;
     max-width: 390px;
@@ -718,7 +725,8 @@ header.story-header {
     opacity: 0.9;
     font-size: 0.9em;
     margin-left: 25px;
-    margin-right: 30px; }
+    margin-right: 30px;
+    font-family: 'American Typewriter', sans-serif; }
   .p-story h2 {
     font-family: "Againts refresh" !important;
     max-width: 80px;
