@@ -574,7 +574,16 @@ header.story-header {
 .page-story {
   background: #000;
   padding-top: 80px;
-  position: relative; }
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden; }
+  .page-story .main-header {
+    background: none; }
+    .page-story .main-header a {
+      display: -ms-flexbox;
+      display: flex; }
+    .page-story .main-header img {
+      margin-right: 15px; }
   .page-story main {
     padding: 0;
     max-width: initial; }
@@ -753,3 +762,25 @@ header.story-header {
   visibility: visible;
   opacity: 1;
   transform: translateY(0px); }
+
+.slide {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  top: 50%;
+  left: 0;
+  transform: translateY(-45%);
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  z-index: -1;
+  transition: .6s all ease; }
+  .slide.slide-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%); }

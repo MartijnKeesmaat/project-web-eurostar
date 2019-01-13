@@ -2,10 +2,22 @@
   background: #000
   padding-top: 80px
   position: relative
-  
+  -webkit-overflow-scrolling: touch
+  overflow: hidden
+
+  .main-header
+    background: none
+
+    a
+      display: flex
+
+    img
+      margin-right: 15px
+
   main
     padding: 0
     max-width: initial
+
   
   h1
     font-family: "Againts refresh" !important
@@ -198,3 +210,23 @@
     visibility: visible
     opacity: 1
     transform: translateY(0px)
+
+.slide
+  display: flex
+  justify-content: center
+  align-items: center
+  opacity: 0
+  visibility: hidden
+  top: 50%
+  left: 0
+  transform: translateY(-45%)
+  right: 0
+  margin: 0 auto
+  position: absolute
+  z-index: -1
+  transition: .6s all ease
+
+  &.slide-visible
+    opacity: 1
+    visibility: visible
+    transform: translateY(-50%)
