@@ -126,44 +126,46 @@ function renderResults(renderItems) {
   renderItems.forEach(render => {
     renderStories += `
     <article class="story-list-item">
-      <figure class="story-list-item__thumbnail">
-        <img src="${render.img}" alt="poster" />
-      </figure>
+      <a href="story.html">
+        <figure class="story-list-item__thumbnail">
+          <img src="${render.img}" alt="poster" />
+        </figure>
 
-      <section class="story-list-item__meta-data">
-        <h3>${render.number} - ${render.title}</h3>
+        <section class="story-list-item__meta-data">
+          <h3>${render.number} - ${render.title}</h3>
 
-        <div class="labels">
-          <p>${render.genre}</p>
-        </div>
-
-        <div class="story-list-item__actions">
-          <div class="story-list-item__actions__like">
-            <button>
-              <img src="img/icons/heart.svg" alt="heart icon" />
-              <span>${render.likes}</span>
-            </button>
+          <div class="labels">
+            <p>${render.genre}</p>
           </div>
 
-          <div class="story-list-item__actions__comments">
-            <button>
-              <img src="img/icons/comments.svg" alt="comment icon" />
-              <span>${render.comments}</span>
-            </button>
-          </div>
+          <div class="story-list-item__actions">
+            <div class="story-list-item__actions__like">
+              <button>
+                <img src="img/icons/heart.svg" alt="heart icon" />
+                <span>${render.likes}</span>
+              </button>
+            </div>
 
-          <div class="story-list-item__actions__downloads">
-            <button>
-              <img src="img/icons/download.svg" alt="download icon" />
-            </button>
-          </div>
+            <div class="story-list-item__actions__comments">
+              <button>
+                <img src="img/icons/comments.svg" alt="comment icon" />
+                <span>${render.comments}</span>
+              </button>
+            </div>
 
-          <div class="story-list-item__actions__views">
-            <button>${render.views} views</button>
+            <div class="story-list-item__actions__downloads">
+              <button>
+                <img src="img/icons/download.svg" alt="download icon" />
+              </button>
+            </div>
+
+            <div class="story-list-item__actions__views">
+              <button>${render.views} views</button>
+            </div>
+            
           </div>
-          
-        </div>
-      </section>
+        </section>
+      </a>
     </article>
   `
   });
@@ -204,7 +206,6 @@ function setGenreDesc(e) {
 function filterDesc(e) {
   setGenreDesc(e);
   let currentStories = filterGenres();
-  console.log(filterGenres());
   if (sortType === 'a-z') renderResults(sortAZ(currentStories));
   else if (sortType === 'nummer') renderResults(sortNumber(currentStories));
   else if (sortType === 'populair') renderResults(sortPopulair(currentStories));

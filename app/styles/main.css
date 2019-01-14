@@ -184,11 +184,13 @@ a {
 .story-list-item {
   width: 100%;
   padding: .9em 1.1em;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
   border-bottom: 1px solid #DAD7D7; }
+  .story-list-item a {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
   .story-list-item:last-child {
     border-bottom: none; }
   .story-list-item__thumbnail {
@@ -213,7 +215,8 @@ a {
       margin: 0;
       font-size: .9em;
       opacity: .6;
-      font-size: .9em; }
+      font-size: .9em;
+      text-transform: capitalize; }
   .story-list-item__actions {
     display: -ms-flexbox;
     display: flex; }
@@ -410,8 +413,6 @@ button.filter-button {
           flex-wrap: wrap;
       padding-top: 40px; }
     .page-search .story-list-item {
-      -ms-flex-direction: column;
-          flex-direction: column;
       background: #fff;
       border-bottom: none;
       box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.15);
@@ -423,6 +424,9 @@ button.filter-button {
       -ms-flex-align: start;
           align-items: flex-start;
       border-radius: 7px; }
+      .page-search .story-list-item a {
+        -ms-flex-direction: column;
+            flex-direction: column; }
       .page-search .story-list-item h3 {
         font-size: 0.9em;
         white-space: nowrap;
@@ -825,3 +829,18 @@ header.story-header {
     margin-right: 10px; }
     .tooltip svg:last-child {
       margin-right: 0; }
+
+.tns-outer {
+  position: relative; }
+
+.tns-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100vw - 40px);
+  left: 0;
+  z-index: 10; }
+  .tns-controls button:last-child {
+    position: absolute;
+    right: 0;
+    z-index: 99999; }

@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Project web - Case: Eurostar" />
   <meta name="author" content="Martijn Keesmaat" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
   <link rel="stylesheet" href="styles/main.css" />
   <title>Eurostar</title>
 </head>
@@ -18,10 +19,10 @@
     <img id="logo" src="img/logo-mobile.svg" alt="logo Eurostar" />
     <nav class="main-nav">
       <ul>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--active">
           <a href="#"> Ontdek </a>
         </li>
-        <li class="main-nav__item main-nav__item--active"><a> Zoek </a></li>
+        <li class="main-nav__item"><a> Zoek </a></li>
         <li class="main-nav__item"><a> Mijn lijsten </a></li>
       </ul>
     </nav>
@@ -29,88 +30,18 @@
 
 
   <main>
-    <aside class="filter-bar">
-      <div class="filter-bar__status">
-        <button class="filter-bar__status__btn--active">Alle verhalen</button>
-        <button>Niet gelezen</button>
-        <button>Gelezen</button>
-      </div>
-      <div class="filter-bar__sort">
-        <h3>Soorten verhalen</h3>
-
-        <div class="filter-bar__sort__item">
-          <input type="checkbox" name="genre-filter" value="vrolijk" id="vrolijk" />
-          <label for="vrolijk"><span>Vrolijk</span> <small>(19 verhalen)</small></label>
-        </div>
-
-        <div class="filter-bar__sort__item">
-          <input type="checkbox" name="genre-filter" value="mysterieus" id="mysterieus" />
-          <label for="mysterieus"><span>Mysterieus</span> <small>(19 verhalen)</small></label>
-        </div>
-
-        <div class="filter-bar__sort__item">
-          <input type="checkbox" name="genre-filter" id="poëtisch" value="poëtisch" />
-          <label for="poëtisch"><span>Poëtisch</span> <small>(19 verhalen)</small></label>
-        </div>
-
-        <div class="filter-bar__sort__item">
-          <input type="checkbox" name="genre-filter" id="dramatisch" value="dramatisch" />
-          <label for="dramatisch"><span>Dramatisch</span> <small>(19 verhalen)</small></label>
-        </div>
-
-        <div class="filter-bar__sort__item">
-          <input type="checkbox" name="genre-filter" id="gepassioneerd" value="gepassioneerd" />
-          <label for="gepassioneerd"><span>Gepassioneerd</span> <small>(19 verhalen)</small></label>
-        </div>
-
-        <div class="filter-bar__sort__item">
-          <input type="checkbox" name="genre-filter" id="grappig" value="grappig" />
-          <label for="grappig"><span>Grappig</span> <small>(19 verhalen)</small></label>
-        </div>
-
-        <div class="filter-bar__sort__item">
-          <input type="checkbox" name="genre-filter" id="beknopt" value="beknopt" />
-          <label for="beknopt"><span>Beknopt</span> <small>(19 verhalen)</small></label>
-        </div>
-      </div>
-    </aside>
-
-    <section class="story-container">
-      <header class="story-header">
-        <div class="story-header__title">
-          <h1>Zoeken <small>56 gevonden</small></h1>
-
-          <div class="applied-filters">
-            <div class="pill pill--sort">Nummer</div>
-            <div class="pill">Mysterieus</div>
-            <div class="applied-filters__rm">Verwijder filters</div>
-          </div>
-        </div>
-
-        <div class="sort-desktop">
-          <h4 class="sort-desktop__title">Sorteer:</h4>
-          <button class="sort-desktop__item sort-desktop__item--active">Populair</button>
-          <button class="sort-desktop__item">Nummer</button>
-          <button class="sort-desktop__item">A-Z</button>
-        </div>
-      </header>
-
-      <div class="stories__overlay"></div>
-
-      <section class="stories">
-        <!--
-          ^ Dit geeft een warning omdat er geen heading in zit, maar als ik dit overal zou toepassen dan zou ik op 1 plek na geen div hebben
-        -->
-        <article class="story-list-item">
+    <div class="story-slider">
+      <article class="story-list-item">
+        <a href="story.html">
           <figure class="story-list-item__thumbnail">
             <img src="img/posters/full/a.jpg" alt="poster" />
           </figure>
 
           <section class="story-list-item__meta-data">
-            <h3>87 - Woordenrally</h3>
+            <h3>1 - Notitie</h3>
 
             <div class="labels">
-              <p>Dramatisch</p>
+              <p>Beknopt</p>
             </div>
 
             <div class="story-list-item__actions">
@@ -139,55 +70,17 @@
               </div>
             </div>
           </section>
-        </article>
+        </a>
+      </article>
 
-        <article class="story-list-item">
+      <article class="story-list-item">
+        <a href="story.html">
           <figure class="story-list-item__thumbnail">
             <img src="img/posters/full/b.jpg" alt="poster" />
           </figure>
 
           <section class="story-list-item__meta-data">
-            <h3>18 - Enigszins aan de omslachtige kant</h3>
-
-            <div class="labels">
-              <p>vrolijk</p>
-            </div>
-
-            <div class="story-list-item__actions">
-              <div class="story-list-item__actions__like">
-                <button>
-                  <img src="img/icons/heart.svg" alt="heart icon" />
-                  <span>12</span>
-                </button>
-              </div>
-
-              <div class="story-list-item__actions__comments">
-                <button>
-                  <img src="img/icons/comments.svg" alt="comment icon" />
-                  <span>3</span>
-                </button>
-              </div>
-
-              <div class="story-list-item__actions__downloads">
-                <button>
-                  <img src="img/icons/download.svg" alt="download icon" />
-                </button>
-              </div>
-
-              <div class="story-list-item__actions__views">
-                <button>262 views</button>
-              </div>
-            </div>
-          </section>
-        </article>
-
-        <article class="story-list-item">
-          <figure class="story-list-item__thumbnail">
-            <img src="img/posters/full/c.jpg" alt="poster" />
-          </figure>
-
-          <section class="story-list-item__meta-data">
-            <h3>12 - Marc 13 poster</h3>
+            <h3>2 - Essentie</h3>
 
             <div class="labels">
               <p>Mysterieus</p>
@@ -215,22 +108,24 @@
               </div>
 
               <div class="story-list-item__actions__views">
-                <button>85 views</button>
+                <button>53 views</button>
               </div>
             </div>
           </section>
-        </article>
+        </a>
+      </article>
 
-        <article class="story-list-item">
+      <article class="story-list-item">
+        <a href="story.html">
           <figure class="story-list-item__thumbnail">
-            <img src="img/posters/full/d.jpg" alt="poster" />
+            <img src="img/posters/full/b.jpg" alt="poster" />
           </figure>
 
           <section class="story-list-item__meta-data">
-            <h3>23 - Marc 13 poster</h3>
+            <h3>2 - Essentie</h3>
 
             <div class="labels">
-              <p>Dramatisch, Crime</p>
+              <p>Mysterieus</p>
             </div>
 
             <div class="story-list-item__actions">
@@ -255,22 +150,24 @@
               </div>
 
               <div class="story-list-item__actions__views">
-                <button>45 views</button>
+                <button>53 views</button>
               </div>
             </div>
           </section>
-        </article>
+        </a>
+      </article>
 
-        <article class="story-list-item">
+      <article class="story-list-item">
+        <a href="story.html">
           <figure class="story-list-item__thumbnail">
-            <img src="img/posters/full/e.jpg" alt="poster" />
+            <img src="img/posters/full/b.jpg" alt="poster" />
           </figure>
 
           <section class="story-list-item__meta-data">
-            <h3>1 - Marc 13 poster</h3>
+            <h3>2 - Essentie</h3>
 
             <div class="labels">
-              <p>Dramatisch, Crime</p>
+              <p>Mysterieus</p>
             </div>
 
             <div class="story-list-item__actions">
@@ -295,82 +192,259 @@
               </div>
 
               <div class="story-list-item__actions__views">
-                <button>34 views</button>
+                <button>53 views</button>
               </div>
             </div>
           </section>
-        </article>
+        </a>
+      </article>
+
+      <article class="story-list-item">
+        <a href="story.html">
+          <figure class="story-list-item__thumbnail">
+            <img src="img/posters/full/b.jpg" alt="poster" />
+          </figure>
+
+          <section class="story-list-item__meta-data">
+            <h3>2 - Essentie</h3>
+
+            <div class="labels">
+              <p>Mysterieus</p>
+            </div>
+
+            <div class="story-list-item__actions">
+              <div class="story-list-item__actions__like">
+                <button>
+                  <img src="img/icons/heart.svg" alt="heart icon" />
+                  <span>12</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__comments">
+                <button>
+                  <img src="img/icons/comments.svg" alt="comment icon" />
+                  <span>3</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__downloads">
+                <button>
+                  <img src="img/icons/download.svg" alt="download icon" />
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__views">
+                <button>53 views</button>
+              </div>
+            </div>
+          </section>
+        </a>
+      </article>
+
+      <article class="story-list-item">
+        <a href="story.html">
+          <figure class="story-list-item__thumbnail">
+            <img src="img/posters/full/b.jpg" alt="poster" />
+          </figure>
+
+          <section class="story-list-item__meta-data">
+            <h3>2 - Essentie</h3>
+
+            <div class="labels">
+              <p>Mysterieus</p>
+            </div>
+
+            <div class="story-list-item__actions">
+              <div class="story-list-item__actions__like">
+                <button>
+                  <img src="img/icons/heart.svg" alt="heart icon" />
+                  <span>12</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__comments">
+                <button>
+                  <img src="img/icons/comments.svg" alt="comment icon" />
+                  <span>3</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__downloads">
+                <button>
+                  <img src="img/icons/download.svg" alt="download icon" />
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__views">
+                <button>53 views</button>
+              </div>
+            </div>
+          </section>
+        </a>
+      </article>
+
+      <article class="story-list-item">
+        <a href="story.html">
+          <figure class="story-list-item__thumbnail">
+            <img src="img/posters/full/b.jpg" alt="poster" />
+          </figure>
+
+          <section class="story-list-item__meta-data">
+            <h3>2 - Essentie</h3>
+
+            <div class="labels">
+              <p>Mysterieus</p>
+            </div>
+
+            <div class="story-list-item__actions">
+              <div class="story-list-item__actions__like">
+                <button>
+                  <img src="img/icons/heart.svg" alt="heart icon" />
+                  <span>12</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__comments">
+                <button>
+                  <img src="img/icons/comments.svg" alt="comment icon" />
+                  <span>3</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__downloads">
+                <button>
+                  <img src="img/icons/download.svg" alt="download icon" />
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__views">
+                <button>53 views</button>
+              </div>
+            </div>
+          </section>
+        </a>
+      </article>
+
+      <article class="story-list-item">
+        <a href="story.html">
+          <figure class="story-list-item__thumbnail">
+            <img src="img/posters/full/c.jpg" alt="poster" />
+          </figure>
+
+          <section class="story-list-item__meta-data">
+            <h3>3 - Droom</h3>
+
+            <div class="labels">
+              <p>Mysterieus</p>
+            </div>
+
+            <div class="story-list-item__actions">
+              <div class="story-list-item__actions__like">
+                <button>
+                  <img src="img/icons/heart.svg" alt="heart icon" />
+                  <span>12</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__comments">
+                <button>
+                  <img src="img/icons/comments.svg" alt="comment icon" />
+                  <span>3</span>
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__downloads">
+                <button>
+                  <img src="img/icons/download.svg" alt="download icon" />
+                </button>
+              </div>
+
+              <div class="story-list-item__actions__views">
+                <button>231 views</button>
+              </div>
+            </div>
+          </section>
+        </a>
+      </article>
+    </div>
+
+    <button class="filter-button" id='filter-button--filter'>
+      <img src="img/icons/filter.svg" alt="" />
+    </button>
+
+    <form onsubmit="return false;" class="filters">
+      <section>
+        <h3>Status <small> <span>7</span> verhalen gevonden</small></h3>
+        <div class="sort-select">
+          <input type="radio" name="status" id="alle" checked />
+          <label class="box" for="alle">Alle</label>
+
+          <input type="radio" name="status" id="niet" />
+          <label class="box" for="niet">Niet gelezen</label>
+
+          <input type="radio" name="status" id="wel" />
+          <label class="box" for="wel">Gelezen</label>
+        </div>
       </section>
 
-      <button class="filter-button" id='filter-button--filter'>
-        <img src="img/icons/filter.svg" alt="" />
+      <section>
+        <h3>Sorteer</h3>
+        <div class="status-select">
+          <input type="radio" name="sort" id="populair" checked />
+          <label class="box" for="populair">Populair</label>
+
+          <input type="radio" name="sort" id="nummer" />
+          <label class="box" for="nummer">Nummer</label>
+
+          <input type="radio" name="sort" id="az" />
+          <label class="box" for="az">A-Z</label>
+
+        </div>
+      </section>
+
+      <section>
+        <h3>Genres</h3>
+        <div class="tag-select__tags">
+
+          <input type="checkbox" name="genre" id="vrolijk" />
+          <label class="pill" for="vrolijk">Vrolijk</label>
+
+          <input type="checkbox" name="genre" id="mysterieus" />
+          <label class="pill" for="mysterieus">Mysterieus</label>
+
+          <input type="checkbox" name="genre" id="drama" />
+          <label class="pill" for="drama">Dramatisch</label>
+
+          <input type="checkbox" name="genre" id="gepassioneerd" />
+          <label class="pill" for="gepassioneerd">Gepassioneerd</label>
+
+          <input type="checkbox" name="genre" id="grappig" />
+          <label class="pill" for="grappig">Grappig</label>
+
+          <input type="checkbox" name="genre" id="beknopt" />
+          <label class="pill" for="beknopt">Beknopt</label>
+
+        </div>
+      </section>
+
+      <button type="submit" class="filter-button" id='filter-button--close'>
+        <img src="img/icons/check.svg" alt="" />
       </button>
-
-      <form onsubmit="return false;" class="filters">
-        <section>
-          <h3>Status <small> <span>7</span> verhalen gevonden</small></h3>
-          <div class="sort-select">
-            <input type="radio" name="status" id="alle" checked />
-            <label class="box" for="alle">Alle</label>
-
-            <input type="radio" name="status" id="niet" />
-            <label class="box" for="niet">Niet gelezen</label>
-
-            <input type="radio" name="status" id="wel" />
-            <label class="box" for="wel">Gelezen</label>
-          </div>
-        </section>
-
-        <section>
-          <h3>Sorteer</h3>
-          <div class="status-select">
-            <input type="radio" name="sort" id="populair" checked />
-            <label class="box" for="populair">Populair</label>
-
-            <input type="radio" name="sort" id="nummer" />
-            <label class="box" for="nummer">Nummer</label>
-
-            <input type="radio" name="sort" id="az" />
-            <label class="box" for="az">A-Z</label>
-
-          </div>
-        </section>
-
-        <section>
-          <h3>Genres</h3>
-          <div class="tag-select__tags">
-
-            <input type="checkbox" name="genre" id="vrolijk" />
-            <label class="pill" for="vrolijk">Vrolijk</label>
-
-            <input type="checkbox" name="genre" id="mysterieus" />
-            <label class="pill" for="mysterieus">Mysterieus</label>
-
-            <input type="checkbox" name="genre" id="drama" />
-            <label class="pill" for="drama">Dramatisch</label>
-
-            <input type="checkbox" name="genre" id="gepassioneerd" />
-            <label class="pill" for="gepassioneerd">Gepassioneerd</label>
-
-            <input type="checkbox" name="genre" id="grappig" />
-            <label class="pill" for="grappig">Grappig</label>
-
-            <input type="checkbox" name="genre" id="beknopt" />
-            <label class="pill" for="beknopt">Beknopt</label>
-
-            <input type="checkbox" name="genre" id="poëtisch" />
-            <label class="pill" for="poëtisch">Poetisch</label>
-
-          </div>
-        </section>
-
-        <button type="submit" class="filter-button" id='filter-button--close'>
-          <img src="img/icons/check.svg" alt="" />
-        </button>
-      </form>
+    </form>
     </section>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
+  <script>
+    var slider = tns({
+      container: '.story-slider',
+      fixedWidth: 250,
+      swipeAngle: false,
+      mouseDrag: true,
+      swipeAngle: false,
+      speed: 400
+    });
+  </script>
   <script src="scripts.js"></script>
 </body>
 
