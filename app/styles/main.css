@@ -830,6 +830,19 @@ header.story-header {
     .tooltip svg:last-child {
       margin-right: 0; }
 
+.story-slider-container h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  font-family: raleway; }
+  .story-slider-container h2:after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    margin-bottom: 20px; }
+
 .tns-outer {
   position: relative; }
 
@@ -838,9 +851,65 @@ header.story-header {
   top: 50%;
   transform: translateY(-50%);
   width: calc(100vw - 40px);
-  left: 0;
+  left: -20px;
   z-index: 10; }
+  .tns-controls button {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.2);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    border-radius: 50%;
+    border: none;
+    color: #fff; }
+    .tns-controls button:focus {
+      outline: none; }
+  .tns-controls button:first-child:before {
+    content: '<';
+    color: #000;
+    font-weight: 800;
+    position: absolute; }
   .tns-controls button:last-child {
     position: absolute;
     right: 0;
     z-index: 99999; }
+    .tns-controls button:last-child:after {
+      content: '>';
+      color: #000;
+      font-weight: 800;
+      position: absolute; }
+
+.tns-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  left: -40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 10; }
+  .tns-nav button {
+    border: none;
+    max-width: 10px;
+    width: 10px;
+    height: 10px;
+    max-width: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0;
+    transition: .3s all ease;
+    margin-right: 10px; }
+    .tns-nav button:focus {
+      outline: none; }
+    .tns-nav button:hover {
+      background: rgba(0, 0, 0, 0.4); }
+    .tns-nav button.tns-nav-active {
+      background: rgba(0, 0, 0, 0.4); }
