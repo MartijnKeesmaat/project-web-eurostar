@@ -117,7 +117,7 @@ a {
   padding: 1.6em 1em 0px 1em;
   position: fixed;
   width: 100%;
-  z-index: 9;
+  z-index: 99;
   top: 0; }
   .main-header #logo {
     height: 1.3em;
@@ -830,18 +830,22 @@ header.story-header {
     .tooltip svg:last-child {
       margin-right: 0; }
 
-.story-slider-container h2 {
-  font-size: 1.4em;
-  font-weight: 600;
-  font-family: raleway; }
-  .story-slider-container h2:after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: rgba(0, 0, 0, 0.2);
-    margin-top: 15px;
-    margin-bottom: 20px; }
+.story-slider-container {
+  margin-top: 50px; }
+  .story-slider-container:first-of-type {
+    margin-top: 0; }
+  .story-slider-container h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    font-family: raleway; }
+    .story-slider-container h2:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 15px;
+      margin-bottom: 20px; }
 
 .tns-outer {
   position: relative; }
@@ -913,3 +917,8 @@ header.story-header {
       background: rgba(0, 0, 0, 0.4); }
     .tns-nav button.tns-nav-active {
       background: rgba(0, 0, 0, 0.4); }
+
+.page-home main {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding-right: 0; }
