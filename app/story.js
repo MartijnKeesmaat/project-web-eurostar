@@ -30,7 +30,8 @@ hero.addEventListener('mousemove', shadow);
 const DOM = {
   body: document.querySelector('body'),
   cta: document.querySelector('.circ-btn'),
-  slides: document.querySelectorAll('.slide')
+  slides: document.querySelectorAll('.slide'),
+  tooltip: document.querySelector('.tooltip')
 }
 
 DOM.cta.addEventListener('click', showStory, false);
@@ -111,4 +112,84 @@ window.addEventListener('keydown', checkKey, false);
 function checkKey(e) {
   // if (e.keyCode === 38) showPrevSlide();
   if (e.keyCode === 40) showNextSlide();
+}
+
+
+window.addEventListener('mouseup', foo, false);
+
+function foo() {
+  var selObj = window.getSelection();
+  var selRange = selObj.getRangeAt(0);
+
+  console.log(selObj);
+  console.log(selRange);
+
+  var text = "";
+  if (window.getSelection) {
+    text = window.getSelection().toString();
+  } else if (document.selection && document.selection.type != "Control") {
+    text = document.selection.createRange().text;
+  }
+
+  if (selObj.type == 'Range') {
+    DOM.tooltip.style.transform = `translate(${getSelectionCoords().x}px, ${getSelectionCoords().y}px)`
+    DOM.tooltip.style.display = 'flex'
+  } else {
+    DOM.tooltip.style.display = 'none'
+  }
+
+}
+
+
+function getSelectionCoords(win) {
+  win = win || window;
+  var doc = win.document;
+  var sel = doc.selection,
+    range, rects, rect;
+  var x = 0,
+    y = 0;
+  if (sel) {
+    if (sel.type != "Control") {
+      range = sel.createRange();
+      range.collapse(true);
+      x = range.boundingLeft;
+      y = range.boundingTop;
+    }
+  } else if (win.getSelection) {
+    sel = win.getSelection();
+    if (sel.rangeCount) {
+      range = sel.getRangeAt(0).cloneRange();
+      if (range.getClientRects) {
+        range.collapse(true);
+        rects = range.getClientRects();
+        if (rects.length > 0) {
+          rect = rects[0];
+        }
+        x = rect.left;
+        y = rect.top;
+      }
+      // Fall back to inserting a temporary element
+      if (x == 0 && y == 0) {
+        var span = doc.createElement("span");
+        if (span.getClientRects) {
+          // Ensure span has dimensions and position by
+          // adding a zero-width space character
+          span.appendChild(doc.createTextNode("\u200b"));
+          range.insertNode(span);
+          rect = span.getClientRects()[0];
+          x = rect.left;
+          y = rect.top;
+          var spanParent = span.parentNode;
+          spanParent.removeChild(span);
+
+          // Glue any broken text nodes back together
+          spanParent.normalize();
+        }
+      }
+    }
+  }
+  return {
+    x: x,
+    y: y
+  };
 }

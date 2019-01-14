@@ -6,7 +6,9 @@ const DOM = {
   storyContainer: document.querySelector('.stories'),
   stories: document.querySelectorAll('.story-list-item'),
   statusLabel: document.querySelectorAll('.status-select label'),
-  genreLabel: document.querySelectorAll('.tag-select__tags label')
+  genreLabel: document.querySelectorAll('.tag-select__tags label'),
+  genreLabelDesc: document.querySelectorAll('.filter-bar__sort__item label'),
+  sortDesc: document.querySelectorAll('.sort-desktop__item'),
 };
 
 
@@ -30,8 +32,7 @@ function toggleFilterMenu() {
 DOM.statusLabel.forEach(i => i.addEventListener('click', setStatus, false))
 DOM.genreLabel.forEach(i => i.addEventListener('click', setGenre, false))
 DOM.close.addEventListener('click', apllyFilters, false);
-
-
+DOM.sortDesc.forEach(i => i.addEventListener('click', sortDesc, false));
 
 
 // Sort
@@ -182,4 +183,39 @@ function apllyFilters(e) {
   if (sortType === 'a-z') renderResults(sortAZ(currentStories));
   else if (sortType === 'nummer') renderResults(sortNumber(currentStories));
   else if (sortType === 'populair') renderResults(sortPopulair(currentStories));
+}
+
+DOM.genreLabelDesc.forEach(i => i.addEventListener('click', filterDesc));
+
+
+function setGenreDesc(e) {
+  const picked = e.target.innerHTML.toLowerCase();
+  if (chosenGenres.includes(picked)) {
+    for (var i = chosenGenres.length - 1; i >= 0; i--) {
+      if (chosenGenres[i] === picked) {
+        chosenGenres.splice(i, 1);
+      }
+    }
+  } else {
+    chosenGenres.push(picked);
+  }
+}
+
+function filterDesc(e) {
+  setGenreDesc(e);
+  let currentStories = filterGenres();
+  console.log(filterGenres());
+  if (sortType === 'a-z') renderResults(sortAZ(currentStories));
+  else if (sortType === 'nummer') renderResults(sortNumber(currentStories));
+  else if (sortType === 'populair') renderResults(sortPopulair(currentStories));
+}
+
+function sortDesc(e) {
+  let s = e.target.innerHTML.toLowerCase();
+  DOM.sortDesc.forEach(i => i.classList.remove('sort-desktop__item--active'));
+  e.target.classList.add('sort-desktop__item--active');
+  let currentStories = filterGenres();
+  if (s === 'a-z') renderResults(sortAZ(currentStories));
+  else if (s === 'nummer') renderResults(sortNumber(currentStories));
+  else if (s === 'populair') renderResults(sortPopulair(currentStories));
 }

@@ -377,10 +377,16 @@ button.filter-button {
     padding-right: 10px;
     margin-right: 10px;
     font-size: .8em; }
+    .sort-desktop__item:focus {
+      outline: none; }
     .sort-desktop__item--active {
       color: #109EB3; }
     .sort-desktop__item:last-child {
       border: none; }
+
+.page-search .story-container {
+  -ms-flex: 1;
+      flex: 1; }
 
 .page-search h1 {
   display: none; }
@@ -425,7 +431,7 @@ button.filter-button {
       .page-search .story-list-item__thumbnail {
         margin: 0;
         width: 100%;
-        height: 280px; }
+        height: 250px; }
         .page-search .story-list-item__thumbnail img {
           width: 100%;
           height: 100%;
@@ -691,8 +697,8 @@ header.story-header {
   transform: translateY(20px);
   transition: 1s all ease;
   width: 100%;
-  top: 80px;
-  max-height: calc(100vh - 80px);
+  top: 0px;
+  max-height: calc(100vh - 0px);
   overflow: hidden;
   display: -ms-flexbox;
   display: flex;
@@ -703,9 +709,10 @@ header.story-header {
   margin: 0 auto;
   height: 100%; }
   .p-story .clouds {
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: 0; }
+    top: 0;
+    z-index: -1; }
   .p-story .backdrop__text {
     color: rgba(255, 255, 255, 0);
     -webkit-text-stroke: 1px #fff;
@@ -724,7 +731,9 @@ header.story-header {
     line-height: 2;
     opacity: 0.9;
     font-size: 0.9em;
+    z-index: 2;
     margin-left: 25px;
+    position: relative;
     margin-right: 30px;
     font-family: 'American Typewriter', sans-serif; }
   .p-story h2 {
@@ -786,9 +795,33 @@ header.story-header {
   right: 0;
   margin: 0 auto;
   position: absolute;
-  z-index: -1;
   transition: .6s all ease; }
   .slide.slide-visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%); }
+
+.tooltip {
+  background: #06183D;
+  padding: 10px;
+  display: none;
+  position: fixed;
+  top: -60px;
+  z-index: 9;
+  padding: 10px;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .tooltip:after {
+    content: "";
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #06183D;
+    position: absolute;
+    bottom: -6px;
+    left: 20px; }
+  .tooltip svg {
+    margin-right: 10px; }
+    .tooltip svg:last-child {
+      margin-right: 0; }

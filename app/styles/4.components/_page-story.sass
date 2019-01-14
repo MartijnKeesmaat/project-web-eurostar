@@ -128,8 +128,8 @@
   transform: translateY(20px)
   transition: 1s all ease
   width: 100%
-  top: 80px
-  max-height: calc(100vh - 80px)
+  top: 0px
+  max-height: calc(100vh - 0px)
   overflow: hidden
   display: flex
   justify-content: center
@@ -138,9 +138,10 @@
   height: 100%
 
   .clouds
-    position: absolute
+    position: fixed
     left: 0
     top: 0
+    z-index: -1
 
   .backdrop__text
     color: rgba(255, 255, 255, 0)
@@ -161,7 +162,9 @@
     line-height: 2
     opacity: 0.9
     font-size: 0.9em
+    z-index: 2
     margin-left: 25px
+    position: relative
     margin-right: 30px
     font-family: 'American Typewriter', sans-serif
 
@@ -227,10 +230,36 @@
   right: 0
   margin: 0 auto
   position: absolute
-  z-index: -1
   transition: .6s all ease
 
   &.slide-visible
     opacity: 1
     visibility: visible
     transform: translateY(-50%)
+
+
+.tooltip
+  background: #06183D
+  padding: 10px
+  display: none
+  position: fixed
+  top: -60px
+  z-index: 9
+  padding: 10px
+  align-items: center
+  justify-content: center
+
+  &:after
+    content: ""
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+    border-top: 6px solid #06183D
+    position: absolute
+    bottom: -6px
+    left: 20px
+
+  svg
+    margin-right: 10px
+
+    &:last-child
+      margin-right: 0
