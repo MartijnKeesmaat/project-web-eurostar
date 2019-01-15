@@ -100,31 +100,31 @@ function showStory() {
     document.querySelector('.soil-vid').style.display = 'none';
     DOM.body.classList.remove('glitch')
     document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
-  }, 25050);
+  }, 25100);
 
   setTimeout(function () {
     document.querySelector('.sakura-vid').style.display = 'block';
     DOM.body.classList.add('glitch')
     document.querySelector('.backdrop__text').innerHTML = '家に帰るだけで混乱します';
-  }, 25100);
+  }, 25200);
 
   setTimeout(function () {
     document.querySelector('.sakura-vid').style.display = 'none';
     DOM.body.classList.remove('glitch')
     document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
-  }, 25150);
+  }, 25300);
 
   setTimeout(function () {
     document.querySelector('.soil-vid').style.display = 'block';
     DOM.body.classList.add('glitch')
     document.querySelector('.backdrop__text').innerHTML = 'נאָר גיין היים איר זענט צעמישט';
-  }, 25200);
+  }, 25400);
 
   setTimeout(function () {
     document.querySelector('.soil-vid').style.display = 'none';
     DOM.body.classList.remove('glitch')
     document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
-  }, 25250);
+  }, 25500);
 }
 
 
@@ -202,9 +202,11 @@ function checkKey(e) {
 }
 
 
-window.addEventListener('mouseup', foo, false);
+window.addEventListener('mouseup', selectText, false);
 
-function foo() {
+let tooltipIsVisible = false;
+
+function selectText() {
   var selObj = window.getSelection();
   var selRange = selObj.getRangeAt(0);
 
@@ -222,14 +224,29 @@ function foo() {
     DOM.tooltip.style.transform = `translate(${getSelectionCoords().x}px, ${getSelectionCoords().y}px)`
     DOM.tooltip.style.display = 'flex'
     DOM.tooltipText.innerHTML = text;
+    document.querySelector('.tooltip-hotspot').style.display = 'block'
+  } else {}
 
-  } else {
-    DOM.tooltip.style.display = 'none'
-    DOM.tooltipComment.style.display = 'none'
-  }
-
+  tooltipIsVisible = true
 }
 
+
+
+document.querySelector('.tooltip-hotspot').addEventListener('click', function (e) {
+  DOM.tooltip.style.display = 'none'
+  DOM.tooltipComment.style.display = 'none'
+  e.target.style.display = 'none'
+})
+
+// document.querySelector('.slide').addEventListener('click', function (e) {
+
+// if (e.target != document.querySelector('.tooltip')) {
+//   DOM.tooltip.style.display = 'none'
+//   DOM.tooltipComment.style.display = 'none'
+// } else {
+//   // console.log('You clicked inside');
+// }
+// })
 
 DOM.tooltipCommentBtn.addEventListener('click', showComment, false);
 
