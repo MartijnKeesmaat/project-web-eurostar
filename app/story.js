@@ -38,6 +38,54 @@ DOM.cta.addEventListener('click', showStory, false);
 
 function showStory() {
   DOM.body.classList.add('show-story');
+
+  setTimeout(function () {
+    document.querySelector('.sakura-vid').style.display = 'block';
+    DOM.body.classList.add('glitch')
+    document.querySelector('.backdrop__text').innerHTML = '家に帰るだけで混乱します';
+  }, 5000);
+
+  setTimeout(function () {
+    document.querySelector('.sakura-vid').style.display = 'none';
+    DOM.body.classList.remove('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
+  }, 7000);
+
+  setTimeout(function () {
+    document.querySelector('.sakura-vid').style.display = 'block';
+    DOM.body.classList.add('glitch')
+    document.querySelector('.backdrop__text').innerHTML = '家に帰るだけで混乱します';
+  }, 11000);
+
+  setTimeout(function () {
+    document.querySelector('.sakura-vid').style.display = 'none';
+    DOM.body.classList.remove('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
+  }, 13000);
+
+  setTimeout(function () {
+    document.querySelector('.soil-vid').style.display = 'block';
+    DOM.body.classList.add('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'נאָר גיין היים איר זענט צעמישט';
+  }, 17000);
+
+  setTimeout(function () {
+    document.querySelector('.soil-vid').style.display = 'none';
+    DOM.body.classList.remove('glitch');
+    document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
+  }, 20000);
+
+  setTimeout(function () {
+    document.querySelector('.soil-vid').style.display = 'block';
+    DOM.body.classList.add('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'נאָר גיין היים איר זענט צעמישט';
+  }, 20500);
+
+  setTimeout(function () {
+    document.querySelector('.soil-vid').style.display = 'none';
+    DOM.body.classList.remove('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
+  }, 21000);
 }
 
 
