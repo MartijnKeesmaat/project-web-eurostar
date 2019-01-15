@@ -2,6 +2,8 @@
 
 This site is made for a school project. The "client" is Eurostar. The goal of this project was to highlight the 99 stories challenge of Molovich in the form of a responsive website. We also got the oppurtunity to pick one story and make an interactive design for that story.
 
+<br>
+
 ## Live version
 - [Demo](https://martijnkeesmaat.github.io/project-web-eurostar/)
 
