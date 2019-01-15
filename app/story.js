@@ -1,3 +1,4 @@
+// Hero text effect
 const hero = document.querySelector('.page-story__header');
 const text = hero.querySelector('h1');
 const walk = 60; // 100px
@@ -27,6 +28,8 @@ function shadow(e) {
 hero.addEventListener('mousemove', shadow);
 
 
+
+// Query DOM
 const DOM = {
   body: document.querySelector('body'),
   cta: document.querySelector('.circ-btn'),
@@ -42,6 +45,7 @@ DOM.cta.addEventListener('click', showStory, false);
 function showStory() {
   DOM.body.classList.add('show-story');
 
+  // Glitch video effect
   setTimeout(function () {
     document.querySelector('.sakura-vid').style.display = 'block';
     DOM.body.classList.add('glitch')
@@ -160,15 +164,7 @@ var scrollCounter = 0;
 function handleMouseWheelDirection(direction) {
   if (scrollCounter % 50 == 0) {
     if (direction == 'down') {
-      // showSlider();
-      // showNextSlide();
       showNextSlide();
-
-    } else if (direction == 'up') {
-      // showPrevSlide();
-      console.log('b');
-    } else {
-      // this means the direction of the mouse wheel could not be determined
     }
   }
 
@@ -197,21 +193,19 @@ function showNextSlide() {
 window.addEventListener('keydown', checkKey, false);
 
 function checkKey(e) {
-  // if (e.keyCode === 38) showPrevSlide();
   if (e.keyCode === 40) showNextSlide();
 }
 
 
+
+
+
+// Tooltip
 window.addEventListener('mouseup', selectText, false);
 
-let tooltipIsVisible = false;
 
 function selectText() {
   var selObj = window.getSelection();
-  var selRange = selObj.getRangeAt(0);
-
-  console.log(selObj);
-  console.log(selRange);
 
   var text = "";
   if (window.getSelection) {
@@ -225,12 +219,8 @@ function selectText() {
     DOM.tooltip.style.display = 'flex'
     DOM.tooltipText.innerHTML = text;
     document.querySelector('.tooltip-hotspot').style.display = 'block'
-  } else {}
-
-  tooltipIsVisible = true
+  }
 }
-
-
 
 document.querySelector('.tooltip-hotspot').addEventListener('click', function (e) {
   DOM.tooltip.style.display = 'none'
@@ -238,22 +228,11 @@ document.querySelector('.tooltip-hotspot').addEventListener('click', function (e
   e.target.style.display = 'none'
 })
 
-// document.querySelector('.slide').addEventListener('click', function (e) {
-
-// if (e.target != document.querySelector('.tooltip')) {
-//   DOM.tooltip.style.display = 'none'
-//   DOM.tooltipComment.style.display = 'none'
-// } else {
-//   // console.log('You clicked inside');
-// }
-// })
-
 DOM.tooltipCommentBtn.addEventListener('click', showComment, false);
 
 function showComment() {
   DOM.tooltipComment.style.display = 'block'
 }
-
 
 function getSelectionCoords(win) {
   win = win || window;
