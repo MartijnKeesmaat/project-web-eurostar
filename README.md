@@ -5,7 +5,7 @@ This site is made for a school project. The "client" is Eurostar. The goal of th
 <br>
 
 ## Live version
-- [Demo](https://martijnkeesmaat.github.io/project-web-eurostar/)
+- [Demo](https://martijnkeesmaat.github.io/project-web-eurostar/app)
 
 <br>
 
