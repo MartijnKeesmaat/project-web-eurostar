@@ -66,6 +66,8 @@ let chosenGenres = []
 
 function setGenre(e) {
   const picked = e.target.innerHTML.toLowerCase()
+  console.log(picked);
+
   if (chosenGenres.includes(picked)) {
     for (var i = chosenGenres.length - 1; i >= 0; i--) {
       if (chosenGenres[i] === picked) {

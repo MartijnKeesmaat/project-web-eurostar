@@ -11,7 +11,6 @@
   <title>Eurostar</title>
 </head>
 
-<!-- <body class="page-search filters--is-active"> -->
 
 <body class="page-search">
   <header class="main-header">
@@ -37,7 +36,7 @@
         <button>Niet gelezen</button>
         <button>Gelezen</button>
       </div>
-      <div class="filter-bar__sort">
+      <section class="filter-bar__sort">
         <h3>Soorten verhalen</h3>
 
         <div class="filter-bar__sort__item">
@@ -69,7 +68,7 @@
           <input type="checkbox" name="genre-filter" id="beknopt" value="beknopt" />
           <label for="beknopt"><span>Beknopt</span> <small>(6 verhalen)</small></label>
         </div>
-      </div>
+      </section>
     </aside>
 
     <section class="story-container">
@@ -95,9 +94,7 @@
       <div class="stories__overlay"></div>
 
       <section class="stories">
-        <!--
-          ^ Dit geeft een warning omdat er geen heading in zit, maar als ik dit overal zou toepassen dan zou ik op 1 plek na geen div hebben
-        -->
+
         <article class="story-list-item">
           <a href="story.html">
             <figure class="story-list-item__thumbnail">
@@ -1628,23 +1625,23 @@
           <h3>Genres</h3>
           <div class="tag-select__tags">
 
-            <input type="checkbox" name="genre" id="vrolijk" />
-            <label class="pill" for="vrolijk">Vrolijk</label>
+            <input type="checkbox" name="genre" id="vrolij" />
+            <label class="pill" for="vrolij">Vrolijk</label>
 
-            <input type="checkbox" name="genre" id="mysterieus" />
-            <label class="pill" for="mysterieus">Mysterieus</label>
+            <input type="checkbox" name="genre" id="mystery" />
+            <label class="pill" for="mystery">Mysterieus</label>
 
             <input type="checkbox" name="genre" id="drama" />
             <label class="pill" for="drama">Dramatisch</label>
 
-            <input type="checkbox" name="genre" id="gepassioneerd" />
-            <label class="pill" for="gepassioneerd">Gepassioneerd</label>
+            <input type="checkbox" name="genre" id="gepass" />
+            <label class="pill" for="gepass">Gepassioneerd</label>
 
-            <input type="checkbox" name="genre" id="grappig" />
-            <label class="pill" for="grappig">Grappig</label>
+            <input type="checkbox" name="genre" id="grappi" />
+            <label class="pill" for="grappi">Grappig</label>
 
-            <input type="checkbox" name="genre" id="beknopt" />
-            <label class="pill" for="beknopt">Beknopt</label>
+            <input type="checkbox" name="genre" id="beknop" />
+            <label class="pill" for="beknop">Beknopt</label>
 
           </div>
         </section>
