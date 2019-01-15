@@ -649,6 +649,16 @@ header.story-header {
       left: 0;
       bottom: 0;
       z-index: 0; }
+    @media (max-width: 750px) {
+      .page-story__header h1 {
+        font-size: 6.2em;
+        margin-top: 90px;
+        line-height: 1.5; }
+      .page-story__header span {
+        position: initial !important; } }
+    @media (max-width: 500px) {
+      .page-story__header h1 {
+        font-size: 4.3em; } }
   .page-story .circ-btn {
     z-index: 1;
     position: absolute;
@@ -803,10 +813,31 @@ header.story-header {
   margin: 0 auto;
   position: absolute;
   transition: .6s all ease; }
+  .slide__text {
+    display: -ms-flexbox;
+    display: flex; }
   .slide.slide-visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%); }
+  @media (max-width: 900px) {
+    .slide {
+      padding: 30px; }
+      .slide__text {
+        -ms-flex-direction: column;
+            flex-direction: column; }
+      .slide p {
+        margin-left: 0; }
+      .slide h2 {
+        max-width: 110px;
+        font-size: 1.1em; } }
+  @media (max-width: 500px) {
+    .slide p {
+      line-height: 1.6;
+      opacity: 0.9;
+      font-size: 0.8em; }
+    .slide .timeline img {
+      height: 290px; } }
 
 .tooltip {
   background: #06183D;
@@ -832,6 +863,45 @@ header.story-header {
     margin-right: 10px; }
     .tooltip svg:last-child {
       margin-right: 0; }
+  .tooltip .tooltip__comment {
+    position: absolute;
+    top: 50px;
+    background: #fff;
+    left: 0;
+    padding: 30px;
+    width: 330px;
+    z-index: 1;
+    display: none; }
+    .tooltip .tooltip__comment main {
+      max-width: 100%; }
+    .tooltip .tooltip__comment header {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center; }
+      .tooltip .tooltip__comment header img {
+        height: 30px; }
+      .tooltip .tooltip__comment header h4 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 0;
+        margin-left: 10px; }
+    .tooltip .tooltip__comment textarea {
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      background-color: white;
+      padding: 10px;
+      height: 90px; }
+    .tooltip .tooltip__comment .selected-text {
+      font-size: .85em;
+      margin-top: 5px;
+      margin-bottom: 0.5em; }
+    .tooltip .tooltip__comment button {
+      background: #06183D;
+      border: none;
+      color: #fff;
+      padding: 1em 1.4em;
+      font-size: 0.6em; }
 
 .fullscreen-bg {
   position: fixed;

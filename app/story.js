@@ -31,7 +31,10 @@ const DOM = {
   body: document.querySelector('body'),
   cta: document.querySelector('.circ-btn'),
   slides: document.querySelectorAll('.slide'),
-  tooltip: document.querySelector('.tooltip')
+  tooltip: document.querySelector('.tooltip'),
+  tooltipText: document.querySelector('.selected-text'),
+  tooltipCommentBtn: document.querySelector('.tooltip__comment-btn'),
+  tooltipComment: document.querySelector('.tooltip__comment')
 }
 
 DOM.cta.addEventListener('click', showStory, false);
@@ -86,6 +89,42 @@ function showStory() {
     DOM.body.classList.remove('glitch')
     document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
   }, 21000);
+
+  setTimeout(function () {
+    document.querySelector('.soil-vid').style.display = 'block';
+    DOM.body.classList.add('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'נאָר גיין היים איר זענט צעמישט';
+  }, 25000);
+
+  setTimeout(function () {
+    document.querySelector('.soil-vid').style.display = 'none';
+    DOM.body.classList.remove('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
+  }, 25050);
+
+  setTimeout(function () {
+    document.querySelector('.sakura-vid').style.display = 'block';
+    DOM.body.classList.add('glitch')
+    document.querySelector('.backdrop__text').innerHTML = '家に帰るだけで混乱します';
+  }, 25100);
+
+  setTimeout(function () {
+    document.querySelector('.sakura-vid').style.display = 'none';
+    DOM.body.classList.remove('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
+  }, 25150);
+
+  setTimeout(function () {
+    document.querySelector('.soil-vid').style.display = 'block';
+    DOM.body.classList.add('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'נאָר גיין היים איר זענט צעמישט';
+  }, 25200);
+
+  setTimeout(function () {
+    document.querySelector('.soil-vid').style.display = 'none';
+    DOM.body.classList.remove('glitch')
+    document.querySelector('.backdrop__text').innerHTML = 'Ga naar huis, je bent in de war';
+  }, 25250);
 }
 
 
@@ -182,10 +221,20 @@ function foo() {
   if (selObj.type == 'Range') {
     DOM.tooltip.style.transform = `translate(${getSelectionCoords().x}px, ${getSelectionCoords().y}px)`
     DOM.tooltip.style.display = 'flex'
+    DOM.tooltipText.innerHTML = text;
+
   } else {
     DOM.tooltip.style.display = 'none'
+    DOM.tooltipComment.style.display = 'none'
   }
 
+}
+
+
+DOM.tooltipCommentBtn.addEventListener('click', showComment, false);
+
+function showComment() {
+  DOM.tooltipComment.style.display = 'block'
 }
 
 

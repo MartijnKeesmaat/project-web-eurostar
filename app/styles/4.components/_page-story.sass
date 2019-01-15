@@ -77,7 +77,18 @@
       bottom: 0
       z-index: 0
 
-    &__text
+    @media(max-width: 750px)
+      h1
+        font-size: 6.2em
+        margin-top: 90px
+        line-height: 1.5
+
+      span
+        position: initial !important
+    
+    @media(max-width: 500px)
+      h1
+        font-size: 4.3em
 
   .circ-btn
     z-index: 1
@@ -239,11 +250,35 @@
   position: absolute
   transition: .6s all ease
 
+  &__text
+    display: flex
+
   &.slide-visible
     opacity: 1
     visibility: visible
     transform: translateY(-50%)
 
+  @media(max-width: 900px)
+    padding: 30px
+
+    &__text
+      flex-direction: column
+
+    p
+      margin-left: 0
+
+    h2
+      max-width: 110px
+      font-size: 1.1em
+
+  @media(max-width: 500px)
+    p
+      line-height: 1.6
+      opacity: 0.9
+      font-size: 0.8em
+
+    .timeline img
+      height: 290px
 
 .tooltip
   background: #06183D
@@ -271,7 +306,50 @@
     &:last-child
       margin-right: 0
 
+  .tooltip__comment
+    position: absolute
+    top: 50px
+    background: #fff
+    left: 0
+    padding: 30px
+    width: 330px
+    z-index: 1
+    display: none
 
+    main
+      max-width: 100%
+
+    header
+      display: flex
+      align-items: center
+
+      img
+        height: 30px
+      
+      h4
+        font-size: 1.8rem
+        font-weight: 400
+        margin-bottom: 0
+        margin-left: 10px
+
+    textarea
+      width: 100%
+      border: 1px solid rgba(#000, .3)
+      background-color: white
+      padding: 10px
+      height: 90px
+
+    .selected-text
+      font-size: .85em
+      margin-top: 5px
+      margin-bottom: 0.5em
+
+    button
+      background: #06183D
+      border: none
+      color: #fff
+      padding: 1em 1.4em
+      font-size: 0.6em
 
 .fullscreen-bg 
   position: fixed
