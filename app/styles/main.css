@@ -379,7 +379,11 @@ button.filter-button {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     padding-right: 10px;
     margin-right: 10px;
-    font-size: .8em; }
+    font-size: .8em;
+    transition: .3s all ease;
+    cursor: pointer; }
+    .sort-desktop__item:hover {
+      color: #109EB3; }
     .sort-desktop__item:focus {
       outline: none; }
     .sort-desktop__item--active {
@@ -519,7 +523,11 @@ button.filter-button {
     -ms-flex-direction: column;
         flex-direction: column; }
     .filter-bar__sort__item {
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      transition: .3s all ease;
+      cursor: pointer; }
+      .filter-bar__sort__item:hover {
+        color: #109EB3; }
     .filter-bar__sort h3 {
       font-size: 1em;
       margin-bottom: 10px;
@@ -1024,7 +1032,11 @@ header.story-header {
         align-items: center;
     border-radius: 50%;
     border: none;
-    color: #fff; }
+    color: #fff;
+    transition: .3s all ease; }
+    .tns-controls button:hover {
+      transform: translateY(-5px);
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1); }
     .tns-controls button:focus {
       outline: none; }
   .tns-controls button:first-child:before {
