@@ -234,6 +234,14 @@ function showComment() {
   DOM.tooltipComment.style.display = 'block'
 }
 
+
+document.querySelector('.tooltip__comment button').addEventListener('click', function () {
+  document.querySelector('.tooltip__comment').innerHTML = `
+    <p>Je hebt dit gemarkeerd</p>
+    <button> <a href="search.html" style="color: #fff"> Ga naar mijn lijsten </a> </button>
+  `
+})
+
 function getSelectionCoords(win) {
   win = win || window;
   var doc = win.document;

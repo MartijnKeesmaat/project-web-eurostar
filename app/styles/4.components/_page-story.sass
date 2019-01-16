@@ -291,6 +291,15 @@
   align-items: center
   justify-content: center
 
+  svg
+    transition: .3s all ease
+
+    &:hover
+      opacity: .6
+
+  &__inner
+    display: flex
+
   &:after
     content: ""
     border-left: 6px solid transparent
@@ -350,6 +359,11 @@
       color: #fff
       padding: 1em 1.4em
       font-size: 0.6em
+      transition: .3s all ease
+      cursor: poiner
+
+      &:hover
+        background: #152e63
 
 .fullscreen-bg 
   position: fixed

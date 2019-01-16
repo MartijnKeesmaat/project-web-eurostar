@@ -855,6 +855,13 @@ header.story-header {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center; }
+  .tooltip svg {
+    transition: .3s all ease; }
+    .tooltip svg:hover {
+      opacity: .6; }
+  .tooltip__inner {
+    display: -ms-flexbox;
+    display: flex; }
   .tooltip:after {
     content: "";
     border-left: 6px solid transparent;
@@ -905,7 +912,11 @@ header.story-header {
       border: none;
       color: #fff;
       padding: 1em 1.4em;
-      font-size: 0.6em; }
+      font-size: 0.6em;
+      transition: .3s all ease;
+      cursor: poiner; }
+      .tooltip .tooltip__comment button:hover {
+        background: #152e63; }
 
 .fullscreen-bg {
   position: fixed;
