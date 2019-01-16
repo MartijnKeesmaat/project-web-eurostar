@@ -432,10 +432,7 @@ button.filter-button {
         -ms-flex-direction: column;
             flex-direction: column; }
       .page-search .story-list-item h3 {
-        font-size: 0.9em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis; }
+        font-size: 0.9em; }
       .page-search .story-list-item__thumbnail {
         margin: 0;
         width: 100%;
